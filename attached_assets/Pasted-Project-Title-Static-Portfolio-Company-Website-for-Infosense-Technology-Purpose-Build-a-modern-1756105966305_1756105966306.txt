@@ -1,0 +1,160 @@
+Project Title:
+Static Portfolio + Company Website for Infosense Technology
+
+Purpose:
+
+Build a modern, responsive, SEO-optimized website for Infosense Technology that:
+✔ Promotes software development services
+✔ Highlights founder’s expertise (Gowtham)
+✔ Showcases skills, projects, and SaaS products
+✔ Acts as a business website + personal branding site
+
+Tech Stack Recommendation:
+
+Frontend: HTML5 + TailwindCSS (or Bootstrap 5)
+
+Optional Interactivity: React.js or Next.js for scalability
+
+Forms: Netlify Forms or Formspree
+
+Deployment: Netlify / Vercel
+
+Performance: Optimized images, lazy loading
+
+Website Structure & Pages:
+✅ 1. Home Page
+
+Hero Section:
+
+Tagline: “Infosense Technology – Building Scalable Solutions for Real Problems”
+
+Background: Tech-oriented abstract image or animation
+
+Buttons: Hire Us & Our Services
+
+Display:
+
+200+ Projects Delivered
+
+4.4+ Years of Experience
+
+SaaS Solutions Available
+
+Quick Highlights Section:
+
+Expertise in PHP (Laravel), Node.js, Secure APIs, Database Optimization
+
+Real-time Gmail Validation Tool (CTA: Try Now)
+
+✅ 2. About Us
+
+Company Overview: Infosense Technology is a software development company led by Gowtham, delivering innovative, scalable solutions.
+
+Founder Bio: Include your career summary and achievements.
+
+Mission & Vision: Provide clarity on why clients should trust you.
+
+Timeline: Visual representation (2016 → Now)
+
+✅ 3. Services
+
+Custom Software Development
+
+Web & Mobile App Development
+
+SaaS Solutions (Gmail Validator, Online Tools)
+
+API Development & Integration
+
+ERP Integration Services
+
+Use icon-based cards with short descriptions.
+
+✅ 4. Skills & Expertise (Separate Section or Part of About)
+
+Backend: PHP (Laravel), Node.js
+
+Frontend: AngularJS, HTML, CSS
+
+Database: MySQL, Oracle ERP
+
+Tools: Postman, Git, Kendo, PM2
+
+Specialties: API Development, Microservices, Razorpay Integration
+
+✅ 5. Portfolio
+
+Showcase TVS-FIT, Partsmart, Olabi
+
+Each project should have:
+
+Image/Logo
+
+Brief Description
+
+Tech Stack
+
+Achievements (e.g., “Improved performance by 30%”)
+
+Add link to full portfolio site
+
+✅ 6. Products (SaaS Tools)
+
+Realtime Gmail Validator: Explain its purpose, add “Try Now” button.
+
+Future Tools: Mention “Coming Soon” for engagement.
+
+✅ 7. Testimonials (Optional for Credibility)
+
+Add 2-3 short client feedbacks.
+
+✅ 8. Contact
+
+Form: Name, Email, Message
+
+Direct Contact:
+
+Phone: +91 97873 04714
+
+Email: gowtham3cse@gmail.com
+
+LinkedIn & WhatsApp links
+
+CTA: “Let’s Build Something Great Together”
+
+✅ Design Features
+
+Modern, Minimal UI
+
+Color Palette:
+
+Primary: #2563EB (Blue)
+
+Secondary: #1E293B (Dark)
+
+Accent: #F3F4F6 (Light Gray)
+
+Font: Poppins / Inter
+
+Animations: Smooth scroll, fade-in on sections
+
+Dark/Light Mode (Optional)
+
+SEO: Title tags, meta description for each page
+
+✅ Extra Features
+
+✔ Sticky Navbar with smooth scroll
+✔ Responsive design for all devices
+✔ Fast loading using compressed images
+✔ Blog Section (optional) for content marketing
+
+✅ Deployment Plan
+
+Host on Netlify or Vercel
+
+Setup Custom Domain (infosense.in or infosensetech.com)
+
+Enable HTTPS
+
+Add Google Analytics & SEO tags

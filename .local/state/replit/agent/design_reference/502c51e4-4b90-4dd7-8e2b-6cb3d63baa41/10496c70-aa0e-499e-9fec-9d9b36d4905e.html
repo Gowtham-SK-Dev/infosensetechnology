@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infosense Technology - Building Scalable Solutions for Real Problems</title>
+    <meta name="description" content="Infosense Technology led by Gowtham delivers innovative software development services, SaaS solutions, and scalable applications with 4.4+ years of experience.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#2563EB',
+                    secondary: '#1E293B',
+                    accent: '#F3F4F6',
+                    success: '#10B981',
+                    danger: '#EF4444'
+                },
+                fontFamily: {
+                    'inter': ['Inter', 'sans-serif']
+                },
+                animation: {
+                    'fade-in': 'fadeIn 0.6s ease-in-out',
+                    'slide-up': 'slideUp 0.8s ease-out',
+                    'bounce-gentle': 'bounceGentle 2s ease-in-out infinite',
+                    'counter': 'counter 2s ease-out forwards'
+                }
+            }
+        }
+    };
+    </script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(40px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes bounceGentle {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #2563EB 0%, #3B82F6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #1E293B 0%, #374151 50%, #2563EB 100%);
+        }
+        .skill-bar {
+            position: relative;
+            overflow: hidden;
+        }
+        .skill-bar::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background: linear-gradient(90deg, #2563EB, #3B82F6);
+            transition: width 2s ease-in-out;
+            width: 0%;
+        }
+        .animate-skill-bar::after {
+            width: var(--skill-width);
+        }
+    </style>
+</head>
+<body class="font-inter bg-white text-secondary">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 bg-white/90 backdrop-blur-md border-b border-gray-200 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex-shrink-0">
+                    <h2 class="text-2xl font-bold gradient-text">Infosense</h2>
+                </div>
+                
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-primary transition-colors">Home</a>
+                        <a href="#about" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-primary transition-colors">About</a>
+                        <a href="#services" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-primary transition-colors">Services</a>
+                        <a href="#portfolio" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-primary transition-colors">Portfolio</a>
+                        <a href="#products" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-primary transition-colors">Products</a>
+                        <a href="#contact" class="nav-link px-3 py-2 rounded-md text-sm font-medium text-secondary hover:text-primary transition-colors">Contact</a>
+                    </div>
+                </div>
+                
+                <div class="md:hidden">
+                    <button class="mobile-menu-button text-secondary hover:text-primary focus:outline-none">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div class="md:hidden mobile-menu hidden">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t border-gray-200">
+                <a href="#home" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary transition-colors">Home</a>
+                <a href="#about" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary transition-colors">About</a>
+                <a href="#services" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary transition-colors">Services</a>
+                <a href="#portfolio" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary transition-colors">Portfolio</a>
+                <a href="#products" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary transition-colors">Products</a>
+                <a href="#contact" class="nav-link block px-3 py-2 rounded-md text-base font-medium text-secondary hover:text-primary transition-colors">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <!-- Modern tech office workspace with multiple monitors and developers collaborating -->
+            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1920&h=1080" alt="Modern tech office" class="w-full h-full object-cover">
+        </div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight">
+                    Building <span class="text-blue-400">Scalable Solutions</span><br>
+                    for Real Problems
+                </h1>
+                <p class="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    Infosense Technology delivers innovative software development services with cutting-edge technology and proven expertise.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+                    <a href="#contact" class="bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl">
+                        Hire Us
+                    </a>
+                    <a href="#services" class="border-2 border-white text-white hover:bg-white hover:text-secondary px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-300 transform hover:scale-105">
+                        Our Services
+                    </a>
+                </div>
+                
+                <!-- Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <div class="glass-card p-6 rounded-xl text-center">
+                        <div class="text-4xl font-bold text-white mb-2">
+                            <span class="counter" data-target="200">0</span>+
+                        </div>
+                        <div class="text-gray-300">Projects Delivered</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center">
+                        <div class="text-4xl font-bold text-white mb-2">
+                            <span class="counter" data-target="4.4">0</span>+
+                        </div>
+                        <div class="text-gray-300">Years of Experience</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-xl text-center">
+                        <div class="text-4xl font-bold text-white mb-2">
+                            <span class="counter" data-target="100">0</span>%
+                        </div>
+                        <div class="text-gray-300">SaaS Solutions Available</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce-gentle">
+            <i class="fas fa-chevron-down text-white text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Quick Highlights -->
+    <section class="py-20 bg-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Our Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Specializing in modern technologies to deliver robust, scalable solutions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center group">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <i class="fab fa-php text-4xl text-primary mb-4"></i>
+                        <h3 class="font-semibold text-secondary">PHP Laravel</h3>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <i class="fab fa-node-js text-4xl text-success mb-4"></i>
+                        <h3 class="font-semibold text-secondary">Node.js</h3>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <i class="fas fa-database text-4xl text-primary mb-4"></i>
+                        <h3 class="font-semibold text-secondary">Database Optimization</h3>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 transform group-hover:scale-105">
+                        <i class="fas fa-shield-alt text-4xl text-success mb-4"></i>
+                        <h3 class="font-semibold text-secondary">Secure APIs</h3>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 bg-white rounded-2xl p-8 shadow-xl">
+                <div class="flex flex-col md:flex-row items-center justify-between">
+                    <div>
+                        <h3 class="text-2xl font-bold text-secondary mb-2">Real-time Gmail Validation Tool</h3>
+                        <p class="text-gray-600">Validate email addresses instantly with our advanced API</p>
+                    </div>
+                    <a href="#products" class="mt-4 md:mt-0 bg-primary hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold transition-colors">
+                        Try Now
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-secondary mb-8">About Infosense Technology</h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        Infosense Technology is a forward-thinking software development company led by <strong>Gowtham</strong>, delivering innovative and scalable solutions that solve real-world problems. With over 4.4 years of experience in the industry, we specialize in creating robust applications that drive business growth.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        Our mission is to bridge the gap between complex technical challenges and elegant solutions, ensuring our clients receive not just software, but strategic advantages that propel their businesses forward.
+                    </p>
+                    
+                    <div class="mb-8">
+                        <h3 class="text-2xl font-bold text-secondary mb-4">Our Vision</h3>
+                        <p class="text-gray-600 leading-relaxed">
+                            To become the go-to technology partner for businesses seeking innovative, scalable, and reliable software solutions that transform ideas into successful digital products.
+                        </p>
+                    </div>
+                    
+                    <!-- Timeline -->
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold text-secondary mb-6">Our Journey</h3>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">2020</div>
+                            <div>
+                                <h4 class="font-semibold text-secondary">Company Founded</h4>
+                                <p class="text-gray-600">Started with a vision to deliver quality software solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-primary text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">2022</div>
+                            <div>
+                                <h4 class="font-semibold text-secondary">Major Projects</h4>
+                                <p class="text-gray-600">Successfully delivered TVS-FIT and Partsmart solutions</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-4">
+                            <div class="bg-success text-white rounded-full w-12 h-12 flex items-center justify-center font-bold">2024</div>
+                            <div>
+                                <h4 class="font-semibold text-secondary">SaaS Innovation</h4>
+                                <p class="text-gray-600">Launched Gmail Validator and expanding product portfolio</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="relative">
+                    <!-- Professional business technology meeting with diverse team discussing software solutions -->
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600" alt="Professional business technology team" class="rounded-2xl shadow-2xl w-full">
+                    
+                    <!-- Founder Highlight -->
+                    <div class="absolute -bottom-8 -left-8 bg-white p-6 rounded-xl shadow-xl border border-gray-100">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-16 h-16 bg-gradient-to-r from-primary to-blue-600 rounded-full flex items-center justify-center text-white font-bold text-xl">
+                                G
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-secondary">Gowtham</h3>
+                                <p class="text-gray-600">Founder & Lead Developer</p>
+                                <p class="text-sm text-gray-500">4.4+ Years Experience</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Our Services</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Comprehensive software development services tailored to your business needs
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
+                    <div class="bg-primary/10 p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">
+                        <i class="fas fa-code text-2xl text-primary"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Custom Software Development</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Tailored software solutions built from ground up to meet your specific business requirements and challenges.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
+                    <div class="bg-success/10 p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-success/20 transition-colors">
+                        <i class="fas fa-mobile-alt text-2xl text-success"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Web & Mobile Development</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Responsive web applications and mobile apps that deliver exceptional user experiences across all platforms.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
+                    <div class="bg-purple-100 p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-purple-200 transition-colors">
+                        <i class="fas fa-cloud text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">SaaS Solutions</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Cloud-based software solutions including our Gmail Validator and other productivity tools for businesses.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
+                    <div class="bg-orange-100 p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-orange-200 transition-colors">
+                        <i class="fas fa-plug text-2xl text-orange-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">API Development & Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Secure, scalable APIs and seamless third-party integrations to connect your systems efficiently.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
+                    <div class="bg-red-100 p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-red-200 transition-colors">
+                        <i class="fas fa-cogs text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">ERP Integration</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Oracle ERP and other enterprise system integrations to streamline your business processes.
+                    </p>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 group">
+                    <div class="bg-indigo-100 p-4 rounded-xl w-16 h-16 flex items-center justify-center mb-6 group-hover:bg-indigo-200 transition-colors">
+                        <i class="fas fa-chart-line text-2xl text-indigo-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-secondary mb-4">Performance Optimization</h3>
+                    <p class="text-gray-600 leading-relaxed">
+                        Database optimization, microservices architecture, and performance tuning for maximum efficiency.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Technical Expertise</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Proficiency in modern technologies and frameworks
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-8">Backend Technologies</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">PHP (Laravel)</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 95%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">Node.js</span>
+                                <span class="text-gray-600">90%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 90%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">MySQL</span>
+                                <span class="text-gray-600">92%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 92%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">Oracle ERP</span>
+                                <span class="text-gray-600">85%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 85%"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-2xl font-bold text-secondary mb-8">Frontend & Tools</h3>
+                    <div class="space-y-6">
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">AngularJS</span>
+                                <span class="text-gray-600">88%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 88%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">HTML/CSS</span>
+                                <span class="text-gray-600">95%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 95%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">API Development</span>
+                                <span class="text-gray-600">93%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 93%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="flex justify-between mb-2">
+                                <span class="font-semibold text-secondary">Microservices</span>
+                                <span class="text-gray-600">87%</span>
+                            </div>
+                            <div class="skill-bar bg-gray-200 rounded-full h-3" style="--skill-width: 87%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="mt-16 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+                <div class="text-center group">
+                    <div class="bg-accent p-4 rounded-xl group-hover:bg-white group-hover:shadow-lg transition-all">
+                        <i class="fas fa-server text-3xl text-primary mb-2"></i>
+                        <p class="text-sm font-semibold text-secondary">Postman</p>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-accent p-4 rounded-xl group-hover:bg-white group-hover:shadow-lg transition-all">
+                        <i class="fab fa-git-alt text-3xl text-orange-600 mb-2"></i>
+                        <p class="text-sm font-semibold text-secondary">Git</p>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-accent p-4 rounded-xl group-hover:bg-white group-hover:shadow-lg transition-all">
+                        <i class="fas fa-chart-bar text-3xl text-success mb-2"></i>
+                        <p class="text-sm font-semibold text-secondary">Kendo</p>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-accent p-4 rounded-xl group-hover:bg-white group-hover:shadow-lg transition-all">
+                        <i class="fas fa-rocket text-3xl text-purple-600 mb-2"></i>
+                        <p class="text-sm font-semibold text-secondary">PM2</p>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-accent p-4 rounded-xl group-hover:bg-white group-hover:shadow-lg transition-all">
+                        <i class="fas fa-credit-card text-3xl text-blue-600 mb-2"></i>
+                        <p class="text-sm font-semibold text-secondary">Razorpay</p>
+                    </div>
+                </div>
+                <div class="text-center group">
+                    <div class="bg-accent p-4 rounded-xl group-hover:bg-white group-hover:shadow-lg transition-all">
+                        <i class="fas fa-network-wired text-3xl text-red-600 mb-2"></i>
+                        <p class="text-sm font-semibold text-secondary">Microservices</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 bg-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">Featured Projects</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Showcasing our successful implementations and client solutions
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- TVS-FIT Project -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden group">
+                    <!-- Software development workspace with modern setup and coding environment -->
+                    <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="TVS-FIT project workspace" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-secondary mb-3">TVS-FIT</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Enterprise fleet management solution with real-time tracking and analytics dashboard.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-secondary mb-2">Tech Stack:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Laravel</span>
+                                <span class="bg-success/10 text-success px-3 py-1 rounded-full text-sm">MySQL</span>
+                                <span class="bg-orange-100 text-orange-600 px-3 py-1 rounded-full text-sm">Angular</span>
+                            </div>
+                        </div>
+                        <div class="bg-accent p-3 rounded-lg">
+                            <p class="text-sm text-secondary font-semibold">Achievement:</p>
+                            <p class="text-sm text-gray-600">Improved fleet efficiency by 35%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Partsmart Project -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden group">
+                    <!-- Modern e-commerce platform interface with product catalogs and shopping features -->
+                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Partsmart e-commerce platform" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-secondary mb-3">Partsmart</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Comprehensive parts inventory management system with automated reordering capabilities.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-secondary mb-2">Tech Stack:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">PHP</span>
+                                <span class="bg-success/10 text-success px-3 py-1 rounded-full text-sm">Node.js</span>
+                                <span class="bg-purple-100 text-purple-600 px-3 py-1 rounded-full text-sm">Oracle</span>
+                            </div>
+                        </div>
+                        <div class="bg-accent p-3 rounded-lg">
+                            <p class="text-sm text-secondary font-semibold">Achievement:</p>
+                            <p class="text-sm text-gray-600">Reduced inventory costs by 25%</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Olabi Project -->
+                <div class="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 overflow-hidden group">
+                    <!-- Web development collaboration workspace with team members working on applications -->
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=250" alt="Olabi project development team" class="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-300">
+                    <div class="p-6">
+                        <h3 class="text-2xl font-bold text-secondary mb-3">Olabi</h3>
+                        <p class="text-gray-600 mb-4 leading-relaxed">
+                            Custom CRM solution with advanced reporting and customer relationship management features.
+                        </p>
+                        <div class="mb-4">
+                            <h4 class="font-semibold text-secondary mb-2">Tech Stack:</h4>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Laravel</span>
+                                <span class="bg-success/10 text-success px-3 py-1 rounded-full text-sm">MySQL</span>
+                                <span class="bg-red-100 text-red-600 px-3 py-1 rounded-full text-sm">APIs</span>
+                            </div>
+                        </div>
+                        <div class="bg-accent p-3 rounded-lg">
+                            <p class="text-sm text-secondary font-semibold">Achievement:</p>
+                            <p class="text-sm text-gray-600">Increased customer retention by 40%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#contact" class="bg-primary hover:bg-blue-600 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-colors inline-flex items-center space-x-2">
+                    <span>View Full Portfolio</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-4">SaaS Products</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Innovative tools and solutions to streamline your business operations
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Gmail Validator -->
+                <div class="bg-gradient-to-r from-primary to-blue-600 rounded-2xl p-8 text-white relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="absolute bottom-0 left-0 w-24 h-24 bg-white/10 rounded-full -ml-12 -mb-12"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center mb-6">
+                            <i class="fas fa-envelope-open text-4xl mr-4"></i>
+                            <h3 class="text-3xl font-bold">Gmail Validator</h3>
+                        </div>
+                        <p class="text-xl mb-6 leading-relaxed">
+                            Real-time email validation service that verifies Gmail addresses instantly with advanced API integration and high accuracy rates.
+                        </p>
+                        <div class="space-y-3 mb-8">
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-300 mr-3"></i>
+                                <span>Real-time validation</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-300 mr-3"></i>
+                                <span>99.9% accuracy rate</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-300 mr-3"></i>
+                                <span>API integration ready</span>
+                            </div>
+                            <div class="flex items-center">
+                                <i class="fas fa-check text-green-300 mr-3"></i>
+                                <span>Bulk validation support</span>
+                            </div>
+                        </div>
+                        <button class="bg-white text-primary px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors">
+                            Try Now - Free
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Coming Soon Products -->
+                <div class="space-y-6">
+                    <div class="bg-accent p-6 rounded-xl border-2 border-dashed border-gray-300">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-clock text-2xl text-gray-400 mr-4"></i>
+                            <h3 class="text-2xl font-bold text-secondary">Project Management Suite</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Comprehensive project management tool with team collaboration features.
+                        </p>
+                        <span class="bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                    </div>
+                    
+                    <div class="bg-accent p-6 rounded-xl border-2 border-dashed border-gray-300">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-chart-line text-2xl text-gray-400 mr-4"></i>
+                            <h3 class="text-2xl font-bold text-secondary">Analytics Dashboard</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Advanced analytics and reporting platform for business intelligence.
+                        </p>
+                        <span class="bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                    </div>
+                    
+                    <div class="bg-accent p-6 rounded-xl border-2 border-dashed border-gray-300">
+                        <div class="flex items-center mb-4">
+                            <i class="fas fa-shield-alt text-2xl text-gray-400 mr-4"></i>
+                            <h3 class="text-2xl font-bold text-secondary">Security Audit Tool</h3>
+                        </div>
+                        <p class="text-gray-600 mb-4">
+                            Automated security scanning and vulnerability assessment platform.
+                        </p>
+                        <span class="bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-semibold">Coming Soon</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-accent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold gradient-text mb-4">What Our Clients Say</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Trusted by businesses for delivering exceptional results
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Infosense Technology delivered our project ahead of schedule with exceptional quality. Their expertise in Laravel and API development is outstanding."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-primary to-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            R
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-secondary">Rajesh Kumar</h4>
+                            <p class="text-gray-600 text-sm">CTO, TechCorp Solutions</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Working with Gowtham was a pleasure. The team's attention to detail and technical skills helped us achieve 30% better performance in our application."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-success to-green-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            S
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-secondary">Sarah Johnson</h4>
+                            <p class="text-gray-600 text-sm">Product Manager, InnovateHub</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white p-8 rounded-2xl shadow-lg">
+                    <div class="flex items-center mb-6">
+                        <div class="flex text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        "Excellent communication and project delivery. The SaaS solution they built for us has significantly improved our business operations."
+                    </p>
+                    <div class="flex items-center">
+                        <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-purple-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                            M
+                        </div>
+                        <div>
+                            <h4 class="font-bold text-secondary">Michael Chen</h4>
+                            <p class="text-gray-600 text-sm">Founder, StartupVenture</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-secondary mb-4">Let's Build Something Great Together</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Ready to transform your ideas into reality? Get in touch with us today.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <!-- Contact Form -->
+                <div class="bg-accent p-8 rounded-2xl">
+                    <h3 class="text-2xl font-bold text-secondary mb-6">Send us a Message</h3>
+                    <form class="space-y-6" id="contactForm">
+                        <div>
+                            <label for="name" class="block text-sm font-semibold text-secondary mb-2">Full Name</label>
+                            <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-semibold text-secondary mb-2">Email Address</label>
+                            <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                        </div>
+                        <div>
+                            <label for="subject" class="block text-sm font-semibold text-secondary mb-2">Subject</label>
+                            <select id="subject" name="subject" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors">
+                                <option>Custom Software Development</option>
+                                <option>Web & Mobile Development</option>
+                                <option>SaaS Solutions</option>
+                                <option>API Development</option>
+                                <option>ERP Integration</option>
+                                <option>General Inquiry</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-semibold text-secondary mb-2">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-colors" placeholder="Tell us about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-primary hover:bg-blue-600 text-white py-4 rounded-lg font-semibold text-lg transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Contact Information -->
+                <div class="space-y-8">
+                    <div>
+                        <h3 class="text-2xl font-bold text-secondary mb-6">Get in Touch</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div class="bg-primary/10 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-phone text-primary text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Phone</h4>
+                                    <p class="text-gray-600">+91 97873 04714</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-success/10 p-3 rounded-lg mr-4">
+                                    <i class="fas fa-envelope text-success text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">Email</h4>
+                                    <p class="text-gray-600">gowtham3cse@gmail.com</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                                    <i class="fab fa-linkedin text-blue-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">LinkedIn</h4>
+                                    <p class="text-gray-600">Connect with us professionally</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center">
+                                <div class="bg-green-100 p-3 rounded-lg mr-4">
+                                    <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-semibold text-secondary">WhatsApp</h4>
+                                    <p class="text-gray-600">Quick chat and support</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Business Hours -->
+                    <div class="bg-accent p-6 rounded-xl">
+                        <h4 class="text-xl font-bold text-secondary mb-4">Business Hours</h4>
+                        <div class="space-y-2 text-gray-600">
+                            <div class="flex justify-between">
+                                <span>Monday - Friday</span>
+                                <span>9:00 AM - 7:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Saturday</span>
+                                <span>10:00 AM - 5:00 PM</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span>Sunday</span>
+                                <span>Closed</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Response Time -->
+                    <div class="bg-primary/5 p-6 rounded-xl border border-primary/20">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-clock text-primary mr-3"></i>
+                            <h4 class="text-xl font-bold text-secondary">Quick Response</h4>
+                        </div>
+                        <p class="text-gray-600">We typically respond to all inquiries within 2-4 hours during business days.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-secondary text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <h3 class="text-3xl font-bold mb-4 gradient-text">Infosense Technology</h3>
+                    <p class="text-gray-300 mb-6 leading-relaxed max-w-md">
+                        Building scalable solutions for real problems. We specialize in custom software development, SaaS solutions, and enterprise integrations.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
+                            <i class="fab fa-twitter text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                        <a href="#" class="bg-white/10 hover:bg-white/20 p-3 rounded-lg transition-colors">
+                            <i class="fab fa-whatsapp text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#services" class="hover:text-white transition-colors">Custom Development</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">Web & Mobile Apps</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">SaaS Solutions</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">API Development</a></li>
+                        <li><a href="#services" class="hover:text-white transition-colors">ERP Integration</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-xl font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#about" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#portfolio" class="hover:text-white transition-colors">Portfolio</a></li>
+                        <li><a href="#products" class="hover:text-white transition-colors">Products</a></li>
+                        <li><a href="#contact" class="hover:text-white transition-colors">Contact</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-300 mb-4 md:mb-0">
+                        © 2024 Infosense Technology. All rights reserved.
+                    </p>
+                    <div class="flex items-center space-x-6 text-gray-300">
+                        <span>Made with ❤️ by Infosense Technology</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        (function() {
+            // Mobile menu toggle
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileMenu = document.querySelector('.mobile-menu');
+            
+            mobileMenuButton.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('.nav-link').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const targetId = link.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth' });
+                        mobileMenu.classList.add('hidden'); // Close mobile menu after click
+                    }
+                });
+            });
+
+            // Counter animation
+            function animateCounter(element) {
+                const target = parseFloat(element.getAttribute('data-target'));
+                const duration = 2000;
+                const step = target / (duration / 16);
+                let current = 0;
+
+                function updateCounter() {
+                    current += step;
+                    if (current < target) {
+                        element.textContent = Math.floor(current).toString();
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        element.textContent = target.toString();
+                    }
+                }
+                updateCounter();
+            }
+
+            // Intersection Observer for animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        // Animate counters
+                        const counters = entry.target.querySelectorAll('.counter');
+                        counters.forEach(counter => {
+                            if (!counter.classList.contains('animated')) {
+                                counter.classList.add('animated');
+                                animateCounter(counter);
+                            }
+                        });
+
+                        // Animate skill bars
+                        const skillBars = entry.target.querySelectorAll('.skill-bar');
+                        skillBars.forEach(bar => {
+                            bar.classList.add('animate-skill-bar');
+                        });
+
+                        // Add fade-in animation class
+                        entry.target.classList.add('animate-fade-in');
+                    }
+                });
+            }, observerOptions);
+
+            // Observe sections for animations
+            document.querySelectorAll('section').forEach(section => {
+                observer.observe(section);
+            });
+
+            // Contact form handling
+            const contactForm = document.getElementById('contactForm');
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                // TODO: Implement form submission logic with proper validation
+                // This could integrate with services like Netlify Forms, Formspree, or custom backend
+                alert('Thank you for your message! We\'ll get back to you soon.');
+                contactForm.reset();
+            });
+
+            // Navbar scroll effect
+            let lastScrollTop = 0;
+            const navbar = document.getElementById('navbar');
+            
+            window.addEventListener('scroll', () => {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    // Scrolling down
+                    navbar.style.transform = 'translateY(-100%)';
+                } else {
+                    // Scrolling up
+                    navbar.style.transform = 'translateY(0)';
+                }
+                lastScrollTop = scrollTop;
+            });
+        })();
+    </script>
+
+</body>
+</html>
