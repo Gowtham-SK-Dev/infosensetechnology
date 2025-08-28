@@ -69,12 +69,12 @@ export default function HeroSection() {
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-testid="hero-title">
-            Building <span className="gradient-text">Scalable Solutions</span><br />
-            for Real Problems
+            Welcome to <span className="gradient-text">Infosense Technology</span><br />
+            Building Tomorrow's Solutions Today
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="hero-description">
-            Led by <span className="text-foreground font-semibold">Gowtham</span>, Infosense Technology delivers innovative software development services with cutting-edge technology and proven expertise. From custom applications to SaaS solutions.
+            Welcome to the future of software development! Led by <span className="text-foreground font-semibold">Gowtham</span>, we transform your ideas into powerful digital solutions. Experience innovation, reliability, and excellence in every project we deliver.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">

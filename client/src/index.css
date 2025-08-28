@@ -261,6 +261,24 @@
   .animate-pulse-slow { animation: pulse-slow 3s ease-in-out infinite; }
   .animate-spin-slow { animation: spin-slow 8s linear infinite; }
 
+  /* Real-time status indicator */
+  .status-online {
+    position: relative;
+  }
+
+  .status-online::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -12px;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    background: #10b981;
+    border-radius: 50%;
+    animation: pulse 2s infinite;
+  }
+
   /* Focus States */
   .focus-ring {
     @apply focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2 focus:ring-offset-background;

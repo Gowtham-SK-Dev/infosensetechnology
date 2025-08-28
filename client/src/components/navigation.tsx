@@ -1,11 +1,21 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/theme-toggle";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Zap } from "lucide-react";
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [currentTime, setCurrentTime] = useState(new Date());
+
+  // Real-time clock update
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setCurrentTime(new Date());
+    }, 1000);
+
+    return () => clearInterval(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -36,6 +46,7 @@ export default function Navigation() {
       <div className="container mx-auto">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
+            <Zap className="w-6 h-6 text-primary" />
             <h2 className="text-2xl font-bold gradient-text" data-testid="logo">
               Infosense<span className="text-primary">.</span>
             </h2>
@@ -54,6 +65,9 @@ export default function Navigation() {
                   <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
                 </button>
               ))}
+            </div>
+            <div className="text-xs text-muted-foreground hidden lg:block">
+              {currentTime.toLocaleTimeString()}
             </div>
             <div className="flex items-center space-x-2">
               <ThemeToggle />

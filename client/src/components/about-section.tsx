@@ -51,7 +51,7 @@ export default function AboutSection() {
           <div className="relative">
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                src="/attached_assets/Image (1).jpg" 
                 alt="Gowtham - Founder & Lead Developer at Infosense Technology"
                 className="rounded-2xl w-full modern-card overflow-hidden"
                 data-testid="about-image"
@@ -64,7 +64,7 @@ export default function AboutSection() {
               <div className="flex items-center space-x-4">
                 <div className="w-16 h-16 rounded-full overflow-hidden border-2 border-primary/20">
                   <img 
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=400" 
+                    src="/attached_assets/Image (1).jpg" 
                     alt="Gowtham headshot"
                     className="w-full h-full object-cover"
                     loading="lazy"

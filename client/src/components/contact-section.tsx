@@ -10,6 +10,39 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { useToast } from "@/hooks/use-toast";
 import { Phone, Mail, Linkedin, MessageCircle, Clock } from "lucide-react";
 
+// Real-time status component
+function LiveStatus() {
+  const [isOnline, setIsOnline] = useState(true);
+  const [responseTime, setResponseTime] = useState("< 2 hours");
+
+  useEffect(() => {
+    const updateStatus = () => {
+      const hour = new Date().getHours();
+      const isBusinessHours = hour >= 9 && hour <= 19; // 9 AM to 7 PM
+      
+      if (isBusinessHours) {
+        setResponseTime("< 30 minutes");
+      } else {
+        setResponseTime("< 4 hours");
+      }
+    };
+
+    updateStatus();
+    const interval = setInterval(updateStatus, 60000); // Update every minute
+
+    return () => clearInterval(interval);
+  }, []);
+
+  return (
+    <div className="flex items-center gap-2 text-sm">
+      <div className={`w-2 h-2 rounded-full ${isOnline ? 'bg-green-500 animate-pulse' : 'bg-gray-400'}`}></div>
+      <span className="text-muted-foreground">
+        {isOnline ? 'Online' : 'Offline'} • Response time: {responseTime}
+      </span>
+    </div>
+  );
+}
+
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
@@ -109,6 +142,7 @@ export default function ContactSection() {
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to transform your ideas into reality? Get in touch with us today and let's discuss your next project.
           </p>
+          <LiveStatus />
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
