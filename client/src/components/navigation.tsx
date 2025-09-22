@@ -46,7 +46,6 @@ export default function Navigation() {
       <div className="container mx-auto">
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
-            <Zap className="w-6 h-6 text-primary" />
             <h2 className="text-2xl font-bold gradient-text" data-testid="logo">
               Vedan 360<span className="text-primary"></span>
             </h2>

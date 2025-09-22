@@ -1,11 +1,7 @@
-<<<<<<< HEAD
 "use client"
 
-import { Linkedin, Twitter, Github, MessageCircle } from "lucide-react"
-=======
-import { useEffect, useState } from "react";
-import { Linkedin, Twitter, Github, MessageCircle } from "lucide-react";
->>>>>>> f446e33ed014b564ec594b525d6eecbd68cd549d
+import { Linkedin, Twitter, Github, MessageCircle, Instagram } from "lucide-react"
+import { useState, useEffect } from "react";
 
 export default function Footer() {
   const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
@@ -49,7 +45,7 @@ export default function Footer() {
 
   const socialLinks = [
     { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Insta" },
     { icon: Github, href: "#", label: "GitHub" },
     {
       icon: MessageCircle,
@@ -125,18 +121,9 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 pt-8" data-testid="footer-bottom">
           <div className="flex flex-col md:flex-row justify-between items-center">
-<<<<<<< HEAD
             <p className="text-gray-400 mb-4 md:mb-0">© 2024 Infosense Technology. All rights reserved.</p>
             <div className="flex items-center space-x-6 text-gray-400">
               <span>Made with ❤️ by Infosense Technology</span>
-=======
-            <p className="text-gray-300 mb-4 md:mb-0">
-              © {currentYear} Infosense Technology. All rights reserved.
-            </p>
-            <div className="flex items-center space-x-6 text-gray-300">
-              <span>Made with ❤️ by Gowtham & Team</span>
-              <span className="text-xs">Last updated: {new Date().toLocaleDateString()}</span>
->>>>>>> f446e33ed014b564ec594b525d6eecbd68cd549d
             </div>
           </div>
         </div>

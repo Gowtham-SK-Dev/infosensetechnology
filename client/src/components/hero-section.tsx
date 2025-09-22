@@ -75,7 +75,7 @@ export default function HeroSection() {
   }
 
   return (
-    <section id="home" className="min-h-screen hero-gradient flex items-center justify-center relative overflow-hidden">
+    <section id="home" className="min-h-screen hero-gradient mt-6 flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute top-20 left-10 w-72 h-72 bg-blue-500/20 rounded-full blur-3xl animate-pulse-slow"></div>
@@ -99,8 +99,8 @@ export default function HeroSection() {
         <div className="stagger-children animate">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 border border-primary/20">
-            <Zap className="w-4 h-4" />
-            <span>Trusted by 200+ Businesses</span>
+            
+            
           </div>
           
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-testid="hero-title">
