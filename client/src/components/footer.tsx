@@ -1,8 +1,29 @@
+<<<<<<< HEAD
 "use client"
 
 import { Linkedin, Twitter, Github, MessageCircle } from "lucide-react"
+=======
+import { useEffect, useState } from "react";
+import { Linkedin, Twitter, Github, MessageCircle } from "lucide-react";
+>>>>>>> f446e33ed014b564ec594b525d6eecbd68cd549d
 
 export default function Footer() {
+  const [currentYear, setCurrentYear] = useState(new Date().getFullYear());
+  const [visitorCount, setVisitorCount] = useState(1247); // Simulated visitor count
+
+  useEffect(() => {
+    // Update year if needed
+    const year = new Date().getFullYear();
+    setCurrentYear(year);
+
+    // Simulate real-time visitor count (in a real app, this would come from analytics)
+    const interval = setInterval(() => {
+      setVisitorCount(prev => prev + Math.floor(Math.random() * 3));
+    }, 30000); // Update every 30 seconds
+
+    return () => clearInterval(interval);
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId)
     if (element) {
@@ -47,6 +68,11 @@ export default function Footer() {
               Building scalable solutions for real problems. We specialize in custom software development, SaaS
               solutions, and enterprise integrations.
             </p>
+            <div className="text-sm text-gray-400 mb-4">
+              <p>🌍 Serving clients worldwide</p>
+              <p>👥 {visitorCount.toLocaleString()}+ visitors this month</p>
+              <p>⚡ Real-time support available</p>
+            </div>
             <div className="flex space-x-4" data-testid="footer-social-links">
               {socialLinks.map((social, index) => (
                 <a
@@ -99,9 +125,18 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 pt-8" data-testid="footer-bottom">
           <div className="flex flex-col md:flex-row justify-between items-center">
+<<<<<<< HEAD
             <p className="text-gray-400 mb-4 md:mb-0">© 2024 Infosense Technology. All rights reserved.</p>
             <div className="flex items-center space-x-6 text-gray-400">
               <span>Made with ❤️ by Infosense Technology</span>
+=======
+            <p className="text-gray-300 mb-4 md:mb-0">
+              © {currentYear} Infosense Technology. All rights reserved.
+            </p>
+            <div className="flex items-center space-x-6 text-gray-300">
+              <span>Made with ❤️ by Gowtham & Team</span>
+              <span className="text-xs">Last updated: {new Date().toLocaleDateString()}</span>
+>>>>>>> f446e33ed014b564ec594b525d6eecbd68cd549d
             </div>
           </div>
         </div>

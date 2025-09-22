@@ -98,18 +98,18 @@ export default function HeroSection() {
       <div className="container mx-auto text-center relative z-10 px-4">
         <div className="stagger-children animate">
           {/* Badge */}
-          <div className="inline-flex items-center gap-2  text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-6 "></div>
-
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight text-gray-900 dark:text-white mt-16 md:mt-20">
-            Building <span className="gradient-text">Scalable Solutions</span>
-            <br />
+          <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6 border border-primary/20">
+            <Zap className="w-4 h-4" />
+            <span>Trusted by 200+ Businesses</span>
+          </div>
+          
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight" data-testid="hero-title">
+            Building <span className="gradient-text">Scalable Solutions</span><br />
             for Real Problems
           </h1>
-
-          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Led by <span className="text-gray-900 dark:text-white font-semibold">Gowtham</span>, Infosense Technology
-            delivers innovative software development services with cutting-edge technology and proven expertise. From
-            custom applications to SaaS solutions.
+          
+          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-3xl mx-auto leading-relaxed" data-testid="hero-description">
+            Led by <span className="text-foreground font-semibold">Gowtham</span>, Infosense Technology delivers innovative software development services with cutting-edge technology and proven expertise. From custom applications to SaaS solutions.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
