@@ -37,7 +37,7 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           <div className="flex-shrink-0">
             <h2 className="text-2xl font-bold gradient-text" data-testid="logo">
-              Infosense<span className="text-primary">.</span>
+              Vedan 360<span className="text-primary"></span>
             </h2>
           </div>
           

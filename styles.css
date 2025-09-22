@@ -17,7 +17,9 @@
   --success: #10b981;
   --warning: #f59e0b;
   --error: #ef4444;
+  
 }
+
 
 body {
   font-family: "Inter", sans-serif;
@@ -25,12 +27,50 @@ body {
   color: var(--foreground);
   background-color: var(--background);
 }
+.hero-gradient {
+  background: linear-gradient(135deg, #1e293b, #312e81);
+}
+
+.dark .hero-gradient {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+}
 
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
+.hero-gradient {
+  background: linear-gradient(135deg, #1e293b, #312e81);
+}
+
+.gradient-text {
+  background: linear-gradient(to right, #6366f1, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
+}
+.animate-pulse-slow { animation: pulse-slow 4s infinite; }
+
+@keyframes spin-slow {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+.animate-spin-slow { animation: spin-slow 12s linear infinite; }
+
+@keyframes bounce-gentle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-bounce-gentle { animation: bounce-gentle 2s infinite; }
+.text-foreground { color: var(--foreground); }
+.text-muted-foreground { color: var(--muted-foreground); }
+.bg-primary { background-color: var(--primary); }
+.bg-success { background-color: var(--success); }
 
 /* Navigation */
 .navbar {

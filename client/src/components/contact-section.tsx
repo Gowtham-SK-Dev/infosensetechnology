@@ -1,27 +1,29 @@
-import { useState } from "react";
-import { useForm } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form";
-import { useToast } from "@/hooks/use-toast";
-import { Phone, Mail, Linkedin, MessageCircle, Clock } from "lucide-react";
+"use client"
+
+import { useState } from "react"
+import { useForm } from "react-hook-form"
+import { zodResolver } from "@hookform/resolvers/zod"
+import { z } from "zod"
+import { Button } from "@/components/ui/button"
+import { Input } from "@/components/ui/input"
+import { Textarea } from "@/components/ui/textarea"
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "@/components/ui/form"
+import { useToast } from "@/hooks/use-toast"
+import { Phone, Mail, Linkedin, MessageCircle, Clock } from "lucide-react"
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
   email: z.string().email("Please enter a valid email address"),
   subject: z.string().min(1, "Please select a subject"),
-  message: z.string().min(10, "Message must be at least 10 characters")
-});
+  message: z.string().min(10, "Message must be at least 10 characters"),
+})
 
-type ContactFormData = z.infer<typeof contactSchema>;
+type ContactFormData = z.infer<typeof contactSchema>
 
 export default function ContactSection() {
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const { toast } = useToast()
 
   const form = useForm<ContactFormData>({
     resolver: zodResolver(contactSchema),
@@ -29,78 +31,78 @@ export default function ContactSection() {
       name: "",
       email: "",
       subject: "",
-      message: ""
-    }
-  });
+      message: "",
+    },
+  })
 
   const onSubmit = async (data: ContactFormData) => {
-    setIsSubmitting(true);
+    setIsSubmitting(true)
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
+      const response = await fetch("/api/contact", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
         body: JSON.stringify(data),
-      });
-      
-      const result = await response.json();
-      
+      })
+
+      const result = await response.json()
+
       if (response.ok) {
         toast({
           title: "Message sent successfully!",
           description: "We'll get back to you within 2-4 hours during business days.",
-        });
-        form.reset();
+        })
+        form.reset()
       } else {
-        throw new Error(result.message || 'Failed to send message');
+        throw new Error(result.message || "Failed to send message")
       }
     } catch (error) {
       toast({
         title: "Error sending message",
         description: "Please try again or contact us directly.",
         variant: "destructive",
-      });
+      })
     } finally {
-      setIsSubmitting(false);
+      setIsSubmitting(false)
     }
-  };
+  }
 
   const contactInfo = [
     {
       icon: Phone,
       title: "Phone",
       value: "+91 97873 04714",
-      color: "bg-primary/10 text-primary"
+      color: "bg-primary/10 text-primary",
     },
     {
       icon: Mail,
       title: "Email",
       value: "gowtham3cse@gmail.com",
-      color: "bg-success/10 text-success"
+      color: "bg-success/10 text-success",
     },
     {
       icon: Linkedin,
       title: "LinkedIn",
       value: "Connect with us professionally",
-      color: "bg-blue-100 text-blue-600"
+      color: "bg-blue-100 text-blue-600",
     },
     {
       icon: MessageCircle,
       title: "WhatsApp",
       value: "Quick chat and support",
-      color: "bg-green-100 text-green-600"
-    }
-  ];
+      color: "bg-green-100 text-green-600",
+    },
+  ]
 
   const businessHours = [
     { day: "Monday - Friday", hours: "9:00 AM - 7:00 PM" },
     { day: "Saturday", hours: "10:00 AM - 5:00 PM" },
-    { day: "Sunday", hours: "Closed" }
-  ];
+    { day: "Sunday", hours: "Closed" },
+  ]
 
   return (
-    <section id="contact" className="py-24 bg-background">
+    <section id="contact" className="py-24 relative bg-background">
       <div className="container">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6" data-testid="contact-title">
@@ -110,7 +112,7 @@ export default function ContactSection() {
             Ready to transform your ideas into reality? Get in touch with us today and let's discuss your next project.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Contact Form */}
           <div className="modern-card p-8" data-testid="contact-form-container">
@@ -124,11 +126,7 @@ export default function ContactSection() {
                     <FormItem>
                       <FormLabel>Full Name</FormLabel>
                       <FormControl>
-                        <Input
-                          placeholder="Your full name"
-                          {...field}
-                          data-testid="input-name"
-                        />
+                        <Input placeholder="Your full name" {...field} data-testid="input-name" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -142,12 +140,7 @@ export default function ContactSection() {
                     <FormItem>
                       <FormLabel>Email Address</FormLabel>
                       <FormControl>
-                        <Input
-                          type="email"
-                          placeholder="your.email@example.com"
-                          {...field}
-                          data-testid="input-email"
-                        />
+                        <Input type="email" placeholder="your.email@example.com" {...field} data-testid="input-email" />
                       </FormControl>
                       <FormMessage />
                     </FormItem>
@@ -210,7 +203,7 @@ export default function ContactSection() {
               </form>
             </Form>
           </div>
-          
+
           {/* Contact Information */}
           <div className="space-y-8">
             <div>
@@ -225,13 +218,13 @@ export default function ContactSection() {
                     </div>
                     <div>
                       <h4 className="font-semibold text-secondary">{info.title}</h4>
-                      <p className="text-gray-600">{info.value}</p>
+                      <p className="text-muted-foreground">{info.value}</p>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
-            
+
             {/* Business Hours */}
             <div className="modern-card p-6" data-testid="business-hours">
               <h4 className="text-xl font-bold mb-4">Business Hours</h4>
@@ -244,9 +237,9 @@ export default function ContactSection() {
                 ))}
               </div>
             </div>
-            
+
             {/* Response Time */}
-            <div className="bg-primary/5 p-6 rounded-xl border border-primary/20" data-testid="response-time">
+            <div className="modern-card p-6 border border-primary/20" data-testid="response-time">
               <div className="flex items-center mb-3">
                 <Clock className="text-primary mr-3" />
                 <h4 className="text-xl font-bold">Quick Response</h4>
@@ -259,5 +252,5 @@ export default function ContactSection() {
         </div>
       </div>
     </section>
-  );
+  )
 }
