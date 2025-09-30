@@ -1,13 +1,17 @@
-"use client"
-
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
-import { Mail, Check, Wrench, Users, ExternalLink } from "lucide-react"
+import { Mail, Check, Wrench, Users } from "lucide-react"
 
 export default function ProductsSection() {
   const features = ["Real-time validation", "99.9% accuracy rate", "API integration ready", "Bulk validation support"]
 
   const comingSoonProducts = [
+    {
+      icon: Wrench,
+      title: "Online Tools",
+      description:
+        "Comprehensive collection of developer and productivity tools including JSON formatter, Base64 encoder, password generator, QR code generator, and 50+ other essential utilities.",
+    },
     {
       icon: Users,
       title: "Digital House",
@@ -62,39 +66,8 @@ export default function ProductsSection() {
             </div>
           </div>
 
-          {/* Live and Coming Soon Products */}
-          <div className="space-y-6" data-testid="products-list">
-            <div
-              className="modern-card p-6 border-2 border-solid border-green-200 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/20 dark:to-emerald-900/20 dark:border-green-700 hover:shadow-lg transition-all duration-300 cursor-pointer"
-              data-testid="online-tools-product"
-              onClick={() => window.open("https://www.infosensetechnologies.com/online-tools/", "_blank")}
-            >
-              <div className="flex items-center mb-4">
-                <Wrench className="text-2xl text-green-600 dark:text-green-400 mr-4" />
-                <h3 className="text-2xl font-bold text-secondary">Online Tools</h3>
-                <ExternalLink className="ml-auto text-green-600 dark:text-green-400 w-5 h-5" />
-              </div>
-              <p className="text-muted-foreground mb-4">
-                Comprehensive collection of developer and productivity tools including JSON formatter, Base64 encoder,
-                password generator, QR code generator, and 50+ other essential utilities.
-              </p>
-              <div className="flex items-center justify-between">
-                <Badge className="bg-green-100 text-green-700 dark:bg-green-900 dark:text-green-300 px-4 py-2 rounded-full text-sm font-semibold">
-                  Live Now
-                </Badge>
-                <Button
-                  className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-semibold transition-colors"
-                  onClick={(e) => {
-                    e.stopPropagation()
-                    window.open("https://www.infosensetechnologies.com/online-tools/", "_blank")
-                  }}
-                >
-                  Visit Tools
-                </Button>
-              </div>
-            </div>
-
-            {/* Coming Soon Products */}
+          {/* Coming Soon Products */}
+          <div className="space-y-6" data-testid="coming-soon-products">
             {comingSoonProducts.map((product, index) => (
               <div
                 key={index}

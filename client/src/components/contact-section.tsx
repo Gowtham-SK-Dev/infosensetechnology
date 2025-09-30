@@ -105,13 +105,13 @@ export default function ContactSection() {
     {
       icon: Phone,
       title: "Phone",
-      value: "+91 update soon....",
+      value: "+91 97873 04714",
       color: "bg-primary/10 text-primary",
     },
     {
       icon: Mail,
       title: "Email",
-      value: "gowtham@infosensetechnologies.com",
+      value: "gowtham3cse@gmail.com",
       color: "bg-success/10 text-success",
     },
     {
